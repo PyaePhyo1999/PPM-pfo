@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import './About.css'
+import resumePdf from '../../assets/resume.pdf'
+
 const About = () => {
 
     const [showModal, setShowModal] = useState(false);
   
     const handleDownload = () => {
       const link = document.createElement('a');
-      link.href = '/resume.pdf';
+      link.href = resumePdf;
       link.download = 'Pyae_Resume.pdf';
       document.body.appendChild(link);
       link.click();
