@@ -1,0 +1,264 @@
+.navbar{
+    background: var(--color-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 150px;
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+.personal-logo{
+    color: var(--color-primary);
+    font-size: 22px;
+    padding: 8px 0;
+}
+.personal-logo span{
+    color: var(--color-highlight);
+    font-size: 24px;
+}
+#logo{
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 6px 14px;
+    background: var(--color-highlight);
+    color: var(--color-secondary);
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-menu li a{
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.nav-menu li a::after{
+    content: '';
+    width: 0%;
+    background: var(--color-highlight);
+    height: 2px;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-menu li a:hover{
+    color: var(--color-highlight);
+ }
+.nav-menu li a:hover::after{
+   width: 100%;
+}
+
+.anchor-link{
+    text-decoration: none;
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 16px;
+    background: var(--color-primary);
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.4s;
+    border: solid 2px;
+    border-color: var(--color-text);
+}
+
+.anchor-link:hover{
+    transform: scale(1.05);
+    color: var(--color-highlight);
+    border-color:  var(--color-highlight);
+}
+
+
+.nav-mob-close{
+    display: none;
+}
+.nav-mob-open{
+    display: none;
+}
+     /* tablet and phone */ 
+@media(max-width:768px){
+
+.navbar{
+    margin: 20px 50px;
+}
+
+.anchor-link{
+    display: none;
+ }
+.personal-logo{
+    font-size: 20px;
+}
+.personal-logo span{
+    font-size: 22px;
+}
+
+.nav-mob-open{
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 70px;
+}
+.nav-mob-close{
+    filter: invert(77%) sepia(30%) saturate(1558%) hue-rotate(359deg) brightness(99%) contrast(91%);
+    display: block;
+    position: relative;
+    left: 140px;
+    top: 40px;
+    width: 20px;
+}
+.nav-menu{
+    position: fixed;
+    align-items: center;
+    background: var(--color-primary);
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    width: 350px;
+    top: 0;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
+}
+.nav-menu ul{
+    margin-top: 40px;
+}
+.nav-menu li a{
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+}
+
+@media(min-width:768px) and (max-width: 900px) { 
+    /* Laptops */ 
+    .navbar{
+        margin: 20px 50px;
+    }
+    
+    .anchor-link{
+        display: none;
+     }
+    .personal-logo{
+        font-size: 20px;
+    }
+    .personal-logo span{
+        font-size: 22px;
+    }
+    
+    .nav-mob-open{
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        right: 70px;
+    }
+    .nav-mob-close{
+        filter: invert(77%) sepia(30%) saturate(1558%) hue-rotate(359deg) brightness(99%) contrast(91%);
+        display: block;
+        position: relative;
+        left: 140px;
+        top: 40px;
+        width: 20px;
+    }
+    .nav-menu{
+        position: fixed;
+        align-items: center;
+        background: var(--color-primary);
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+        width: 350px;
+        top: 0;
+        z-index: 2;
+        transition: right 0.5s;
+        right: -350px;
+    }
+    .nav-menu ul{
+        margin-top: 40px;
+    }
+    .nav-menu li a{
+        text-decoration: none;
+        color: var(--color-secondary);
+    }
+
+}
+
+@media(min-width:900px) and (max-width: 1024px) { 
+    /* Laptops */ 
+    .navbar{
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 50px;
+        padding: 8px 20px;
+        border-radius: 50px;
+    }
+    .personal-logo{
+   
+        font-size: 18px;
+
+    }
+    .personal-logo span{
+ 
+        font-size: 20px;
+    }
+
+    .nav-menu{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    .nav-mob-close{
+        display: none;
+    }
+    .nav-mob-open{
+        display: none;
+    }
+
+}
+
+@media(min-width:1024px) and (max-width: 1260px) { 
+    /* Laptops */ 
+    .navbar{
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 50px;
+        padding: 8px 20px;
+        border-radius: 50px;
+    }
+    .personal-logo{
+        font-size: 20px;
+    }
+    .personal-logo span{
+        font-size: 24px;
+    }
+
+    .nav-menu{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 20px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    .nav-mob-close{
+        display: none;
+    }
+    .nav-mob-open{
+        display: none;
+    }
+
+}

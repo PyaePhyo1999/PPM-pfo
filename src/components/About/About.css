@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+ 
+.about{
+    background: var(--color-secondary);
+}
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 150px;
+    padding: 60px 0;
+}
+
+.about-title{
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-title h1{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.about-title span{
+    color: var(--color-highlight);
+}
+
+.about-section {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-section-left{
+    flex-basis: 30%;
+}
+
+.about-section-left p{
+    color: var(--color-primary);
+    font-size: 16px;
+    line-height: 34px;  
+    font-weight: 500;
+}
+
+.about-section-right{
+    flex-basis: 60%;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: 0.3;
+}
+
+.skill p{
+    min-width: 150px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.skill hr{
+    outline: none;
+    border: none;
+    height: 8px;
+    border-radius: 50px;
+    background: linear-gradient(265deg,var(--color-primary) -5.09%,var(--color-highlight) 106.28%)
+}
+.milestones{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.milestone{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 10px;
+    transition: 0.5s;
+}
+
+.milestone h1{
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--color-highlight);
+}
+
+.milestone p{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.about-action{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.about-action .download-cv{
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50px;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: 0.5s;
+    background: var(--color-highlight);
+    padding: 6px 6px;
+}
+.about-action .download-cv p{
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: var(--color-secondary);
+    border-radius: 50px;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.about-action span{
+    font-size: 18px;
+    margin-left: 10px;
+    border-radius: 50%;
+    padding: 6px 10px;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.about-action .download-cv:hover{
+    transform: scale(1.05);
+}
+.about-action .download-cv p:hover{
+   color: var(--color-highlight);
+}
+.about-action .download-cv span:hover{
+    color: var(--color-highlight);
+ }
+ 
+ .about-action #signature{
+    color: var(--color-highlight);
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin: 20px 0;
+    display: inline-block;
+ }
+ .skill:hover{
+    transform: scale(1.02);
+    transition: 0.5s;
+ }   
+ .milestone:hover{
+    transform: scale(1.02);
+    transition: 0.5s;
+ }
+ .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.modal {
+    background: var(--color-secondary);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+}
+  
+.modal h3{
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 22px;
+    padding: 8px 0;
+}
+
+.modal span{
+    color: var(--color-highlight);
+}
+
+.modal p{
+    padding: 4px 0;
+    color: var(--color-primary);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.modal-buttons button{
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: var(--color-highlight);
+    border: 1px solid var(--color-highlight);
+}
+
+.modal-buttons button:hover{
+    background: var(--color-secondary);
+    color: var(--color-highlight);
+    border: 1px solid var(--color-primary);
+}
+
+
+@media(max-width:1024px){
+
+    .about-container{
+        margin: 0 50px;
+    }
+
+    .about-title h1{
+        font-size: 20px;
+    }
+    
+    .about-section {
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: baseline;
+    }
+     
+    .about-section-left p{
+        width: 100%;
+        font-size: 16px;
+        line-height: 30px;  
+    }
+    
+    .about-section-right{
+        width: 100%;
+        margin-top: 20px;
+    }
+  
+    .milestones{
+        margin-top: 20px;
+    }
+    
+    .milestone h1{
+        font-size: 20px;
+    }
+    
+    .milestone p{
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .milestones hr{
+        height: 80px;
+        margin: 10px 0;
+    }
+    
+}
+
+    
+@media(min-width:1024px) and (max-width:1260px){
+
+    .about{
+        background: var(--color-secondary);
+    }
+    
+    .about-container{
+        margin: 0 50px;
+    }
+
+    .about-section {
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .about-section-left p{
+        color: var(--color-primary);
+        font-size: 16px;
+        line-height: 30px;  
+        font-weight: 500;
+    }
+    
+    .skills{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .milestone h1{
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--color-highlight);
+    }
+    
+    .milestone p{
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--color-primary);
+    }
+    
+    .about-action{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        margin-top: 20px;
+    }
+    
+     .about-action #signature{
+        font-size: 18px;
+     }
+
+}
+
