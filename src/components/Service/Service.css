@@ -105,8 +105,32 @@
     color: var(--color-highlight);
 }
 
+@media(max-width:600px){
+    .service-container{
+        margin: 0 30px;
+        padding: 60px 0;
+    }
+    .service-title h1{
+        font-size: 20px;
+    }
 
-@media(max-width:768px){
+    .service-title p{
+        font-size: 32px;
+    }
+
+    .service-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .service-format h3{
+   
+        font-size: 22px;
+    }
+}
+
+@media(min-width:600px) and (max-width:768px){
     
     .service-container{
         margin: 0 50px;

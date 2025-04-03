@@ -159,6 +159,7 @@
     margin: 20px 0;
     display: inline-block;
  }
+
  .skill:hover{
     transform: scale(1.02);
     transition: 0.5s;
@@ -223,8 +224,65 @@
     border: 1px solid var(--color-primary);
 }
 
+@media(max-width:600px){
 
-@media(max-width:1024px){
+    .about-container{
+        margin: 0 30px;
+    }
+
+    .about-title h1{
+        font-size: 20px;
+    }
+    
+    .about-section {
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: baseline;
+    }
+     
+    .about-section-left p{
+        width: 100%;
+        font-size: 16px;
+        line-height: 30px;  
+    }
+    
+    .about-section-right{
+        width: 100%;
+        margin-top: 20px;
+    }
+  
+    .milestones{
+        margin-top: 20px;
+    }
+    
+    .milestone h1{
+        font-size: 18px;
+    }
+    
+    .milestone p{
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .milestones hr{
+        height: 70px;
+        margin: 10px 0;
+    }
+    .about-action .download-cv p{
+        font-size: 14px;
+    }
+
+    .about-action span{
+        font-size: 16px;
+    }
+ 
+    .about-action #signature{
+         font-size: 16px; 
+    }
+}
+
+
+@media(min-width:600px) and (max-width:1024px){
 
     .about-container{
         margin: 0 50px;
@@ -261,7 +319,7 @@
     
     .milestone p{
         text-align: center;
-        font-size: 14px;
+        font-size: 16px;
     }
     
     .milestones hr{

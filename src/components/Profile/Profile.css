@@ -163,7 +163,76 @@
     filter: grayscale(10%);
 }
 
-@media(max-width:900px){
+@media(max-width:600px){
+
+    .profile{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 20px 10px;
+        padding: 0px 20px;
+    }
+
+    .profile-brief .intro{
+        font-size: 28px;
+    }
+    
+    .profile-action{
+        display: flex;
+        gap: 16px;
+        margin-top: 20px;
+    }
+    .profile-action .resume{
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        border-radius: 50px;
+        color: var(--color-text);
+        cursor: pointer;
+        transition: 0.5s;
+        background: var(--color-highlight);
+        padding: 6px 6px;
+    }
+    .profile-action .resume p{
+        padding: 10px 10px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 12px;
+    }
+    
+    .profile-action span{
+        font-size: 16px;
+        border-radius: 50%;
+        padding: 4px 8px;
+    }
+
+    .profile-action .p-anchor-link{
+        font-size: 14px;
+    }
+
+    .img-container{
+        padding: 20px 0;
+    }
+
+    .profile-img{
+        border-radius: 50%;
+        background: var(--color-card);
+    }
+    
+
+    .profile-img img{
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        opacity: 0.9;
+        mix-blend-mode: multiply;
+        filter: grayscale(10%);
+    }
+
+    
+}
+
+@media(min-width:600px) and (max-width:900px){
 
     .profile{
         flex-direction: column-reverse;
@@ -184,7 +253,6 @@
     }
     .profile-img{
         border-radius: 50%;
-        margin-top: 40px 0;
         background: var(--color-card);
     }
     

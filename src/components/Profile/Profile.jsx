@@ -28,8 +28,9 @@ const Profile = () => {
                 <div className='connect'><AnchorLink className='p-anchor-link' offset={10} href='#contact'><p>Connect with me &#x2192;</p></AnchorLink></div>
             </div>
         </div>
-        <div className='profile-img'>
-            <img src={profile} alt=''></img>
+        <div className='img-container'>
+            <div className='profile-img'><img src={profile} alt=''></img></div>
+            
         </div>
    
         

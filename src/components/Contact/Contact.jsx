@@ -121,7 +121,7 @@ const Contact = () => {
                     <label htmlFor=''>Write Your Message Here</label>
                     <div>
                     <textarea rows="8" name='message' placeholder='Enter here...' className={errors.message ? 'error':''}/>
-                    {errors.message && <span className='error-messsage'>{errors.message}</span>}
+
                     </div>
                     <div className='submit-section'>
                     <div className='submit'>

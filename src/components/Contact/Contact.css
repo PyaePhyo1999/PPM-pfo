@@ -146,7 +146,6 @@ input:-webkit-autofill {
 }
 
 .contact-right .submit{
-    width: 180px;
     align-items: center;
     display: flex;
     cursor: pointer;
@@ -173,7 +172,7 @@ input:-webkit-autofill {
 
 .contact-right .submit span{
     font-size: 18px;
-    margin-left: 10px;
+    margin: 0 8px;
     border-radius: 50%;
     padding: 6px 10px;
     background: var(--color-primary);
@@ -218,8 +217,79 @@ input:-webkit-autofill {
   .error {
     border: 1px solid var(--color-highlight) !important;
   }
+
+  @media(max-width:600px){
+
+    .contact-container{  
+        margin: 0 30px;
+    }
+    
+    .contact-title h1{
+        padding: 10px 0;
+        font-size: 20px;
+    }
+    
+    .contact-left p{
+        font-size: 32px;
+    }
+    
+    .contact-section{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+
+    .contact-left #contact-brief{
+        font-size: 16px;
+    }
+    
+    .contact-detail i{
+        font-size: 14px;
+    }
+    
+    .contact-detail p{
+        font-size: 16px;
+    }
+    
+
+    .contact-right label{
+       font-size: 16px;
+    }
+    
+    .contact-right input{
+        width: 300px;
+        font-size: 14px;
+    }
+    
+    .contact-right textarea{
+        width: 300px;
+        font-size: 14px;
+    }
+
+    .contact-right button{
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+ 
+    
+    .contact-right .submit span{
+        font-size: 16px;
+    }   
+
+    /* Alert message styling */
+    .alert {
+    padding: 10px 0px;
+    border-radius: 4px;
+    font-size: 16px; /* Adjust size as needed */
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    }
   
-@media(max-width:900px){
+}
+
+@media(min-width:600px) and (max-width:900px){
 
     .contact-container{  
         margin: 0 50px;
