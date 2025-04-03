@@ -154,12 +154,6 @@
     background-color: var(--color-highlight);
 }
 
-.profile-img{
-  width: 500px;
-  height: 500px;
-  background-color: var(--color-primary);
-}
-
 .profile-img img{
     height: 500px;
     width: 500px;
@@ -188,14 +182,13 @@
         gap: 25px;
         margin-top: 20px;
     }
-    
     .profile-img{
-      width: 250px;
-      height: 250px;
-      background: var(--color-card);
-      border-radius: 50%;
+        border-radius: 50%;
+        margin-top: 40px 0;
+        background: var(--color-card);
     }
     
+
     .profile-img img{
         border-radius: 50%;
         height: 250px;
@@ -226,11 +219,6 @@
         align-items: center;
         gap: 25px;
         margin-top: 20px;
-    }
-    
-    .profile-img{
-      width: 350px;
-      height: 350px;
     }
     
     .profile-img img{
@@ -264,11 +252,7 @@
         margin-top: 20px;
     }
     
-    .profile-img{
-      width: 400px;
-      height: 400px;
-    }
-    
+
     .profile-img img{
         height: 400px;
         width: 400px;

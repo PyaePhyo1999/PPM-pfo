@@ -4,7 +4,7 @@ import './Introduction.css'
 const Introduction = () => {
   return (
     <div id='intro' className="introduction">
-      <div className='intro-section'>
+      <div className='intro-container'>
       <div className='introduction-brief'>
           <h1>Who am I</h1>       
           <p>My name is Pyae Phyo Maung, a computer science graduate with over four years of AI and Data anaylst.</p>
