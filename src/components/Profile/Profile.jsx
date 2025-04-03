@@ -6,7 +6,7 @@ const Profile = () => {
   const profile = new URL('../../assets/pfile8.jpg', import.meta.url).href;
     const viewResume = () => {
       // Directly open the PDF in a new tab
-        window.open('PPM-pfo/resume.pdf', '_blank');
+        window.open('/resume.pdf', '_blank');
     };
     
   return (
