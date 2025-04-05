@@ -29,6 +29,16 @@ const Contact = () => {
       }
       }, [submitStatus]);
 
+      useEffect(() => {
+            if (Object.keys(errors).length > 0) {
+                  const timer = setTimeout(() => {
+                      setErrors({});
+                  }, 3000); // 3000ms = 3 seconds
+                return () => clearTimeout(timer);
+              }
+          }, [errors]); // Trigger when errors change
+      
+
     const onSubmit = async (event) => {
         event.preventDefault();
         setIsLoading(true);
@@ -106,6 +116,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>  
+
                 <form onSubmit={onSubmit} className='contact-right'>
                     <label htmlFor=''>Your Name</label>
                     <div>
@@ -128,15 +139,16 @@ const Contact = () => {
                            <button type="submit" disabled={isLoading} className='contact-submit' >
                               {buttonText}
                             </button> <span>&#x27A4;</span>
-                             {/* Auto-disappearing alert */}
+                             
                     </div>
                    
                     </div>
+                    {/* Auto-disappearing alert */}
                     {submitStatus && (
                         <div className={`alert ${submitStatus} ${submitStatus ? 'visible' : ''}`}>
                             {submitStatus === 'success' 
-                                ? '✓ Message sent successfully!' 
-                                : '✗ Failed to send. Please try again.'}
+                                ? 'Message sent successfully!' 
+                                : 'Please, state your reason.'}
                         </div>
                          )}
                 </form>

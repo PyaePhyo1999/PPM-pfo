@@ -1,9 +1,89 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Footer.css'
 import arrow from '../../assets/email-right-arrow.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Footer = () => {
+    const [isLoading, setIsLoading] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null);
+    const [errors,setErrors]=useState({})
+
+    const validateForm = (formData) => {
+
+        const newErrors = {};
+        if (!formData.get('email')) newErrors.email = 'Email is required';
+        else if (!/^\S+@\S+\.\S+$/.test(formData.get('email'))) 
+          newErrors.email = 'Invalid email format';
+        
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+      };
+
+      useEffect(() => {
+        if (Object.keys(errors).length > 0) {
+            const timer = setTimeout(() => {
+                setErrors({});
+            }, 3000); // 3000ms = 3 seconds
+            return () => clearTimeout(timer);
+        }
+    }, [errors]); // Trigger when errors change
+
+        useEffect(() => {
+          if (submitStatus) {
+            const timer = setTimeout(() => {
+              errors.message
+              setSubmitStatus(null);
+          }, 3000);
+            return () => clearTimeout(timer);
+          }
+          }, [submitStatus],[errors.message]);
+    
+          const onSubm = async (event) => {
+            event.preventDefault();
+            setIsLoading(true);
+              
+    
+            const formData = new FormData(event.target);
+            formData.append("access_key", "0cdaccab-ed93-4c88-b15f-eca318a21c07");
+    
+            try{
+              setErrors({}); 
+
+              if (!validateForm(formData)){
+                isLoading(true)
+                return;
+              } 
+              else{
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+            
+                const res = await fetch("https://api.web3forms.com/submit", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                  },
+                  body: json
+                }).then((res) => res.json());
+                if (res.success) {
+                    event.target.reset();
+                    setSubmitStatus('success');
+                    console.log("Success", res);
+                  }  
+                  else {
+                    throw new Error(res.message || "Submission failed");
+                  }
+              }  
+      
+            }
+            catch(error){
+                console.error("Error:", error);
+                setSubmitStatus('error');   
+            }
+            finally{
+              setIsLoading(false);
+            }
+            };
 
   return (
     <div className='footer'>
@@ -73,18 +153,33 @@ const Footer = () => {
                           <li>Soi Sukhumvit 64, Phrakhanong Tai, Bangkok, Thailand</li>
                     </ul>
             </div>  
-            <div className='section-4'>
+
+            <form onSubmit={onSubm} className='section-4'>
                 <h3 id='info'>Get the latest Information</h3> 
                 <div className='user-email'>
                     <i class="fa-solid fa-user"></i>
-                    <input type='email' placeholder='Email address'/>
-                    <div className='sent-email'><img id="email-sent" src={arrow} alt=''></img></div>
+                    <input type='text' name='email' placeholder='Email Address' id='footer-email' className={errors.email ? 'error-mail-footer' : ''}/>
+                   
+                    
+                    <button type="submit" disabled={isLoading} className='sent-email'>
+                    <img id="email-sent" src={arrow} alt=''></img>
+                        </button>
+                
                 </div>
-            </div>  
+                {errors.email && <span className="error-message">{errors.email}</span>}
+                {submitStatus && (
+                        <div className={`alert-message ${submitStatus} ${submitStatus ? 'visible' : ''}`}>
+                            {submitStatus === 'success' 
+                                ? 'Message sent successfully!' 
+                                : ""}
+                        </div>
+                         )}
+                        
+            </form>  
         </div>
     </div> 
     <div className='section-footer'>
-        <p>Copyright © 2025 <span id='name'>Pyae Phyo Maung.</span> All Rights Reserved</p>
+        <p>Copyright © 2025 <span id='name'>Pyae Phyo Maung.</span> All Rights Reserved.</p>
     </div>
 </div>
   )
