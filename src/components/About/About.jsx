@@ -24,11 +24,7 @@ const About = () => {
         </div>
         <div className='about-section'>   
           <div className='about-section-left'>
-              <p>I have a solid background in data analysis and a strong ability to interpret data sets.
-                In my previous role, I worked with various data tools to extract insights that helped improve business decisions. 
-                I am skilled in using Excel, SQL, and Python for data manipulation and analysis. 
-                I pay attention to detail and enjoy solving problems with data.
-              </p>
+          <i class="fa-sharp-duotone fa-solid fa-screwdriver-wrench"></i>
           </div>
           <div className='about-section-right'>
           <div className='skills'>

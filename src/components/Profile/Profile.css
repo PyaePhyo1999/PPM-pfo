@@ -1,72 +1,79 @@
 .profile{
     height: 80vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
     align-items: center;
-    margin: 40px 150px;
-    padding: 0px 20px;
+    margin: var(--margin-md) var(--margin-xxl);  
+    padding: var(--padding-sm) 0;
+}
+.profile-brief{
+    padding: var(--padding-sm) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
 }
 
 .decorated-text-box .hello{
     color: var(--color-text);
-    font-weight: 400;
-    padding: 4px 14px;
-    font-size: 22px;
+    font-weight: var(--fw-medium);
+    padding: var(--padding-xxs) var(--padding-sm);
+    font-size: var(--fs-medium-md);
     border: solid 2px;
     border-color: var(--color-text);
 }
+
 .decorated-text-box{
-    margin-left: 8px;
+    margin-left: var(--margin-xs);
     position: relative;
     display: inline-flex;
 }
 .corner-block {
     position: absolute;
-    width: 16px;
-    height: 10px;
+    width: var(--margin-sm);
+    height: var(--margin-xs);
     background-color: var(--color-highlight);
     border: 2px solid var(--color-text)
   }
   
 /* Rectangle version */
 .top-left {
-    top: -4px;
-    left: -6px;
-    ;
+    top: var(--margin-cb-xs);
+    left: var(--margin-cb-sm);
   }
   
 .top-right {
-    top: -4px;
-    right: -6px;
+    top: var(--margin-cb-xs);
+    right: var(--margin-cb-sm);
 }
   
 .bottom-left {
-    bottom: -4px;
-    left: -6px;
+    bottom: var(--margin-cb-xs);
+    left: var(--margin-cb-sm);
 }
   
 .bottom-right {
-    bottom: -4px;
-    right: -6px;
+    bottom: var(--margin-cb-xs);
+    right: var(--margin-cb-sm);
 }
   
 
 .profile-brief .intro{
-    margin-top: 20px;
-    font-size: 50px;
-    font-weight: 500;
+    padding: var(--padding-md) 0;
+    font-size: var(--fs-medium-lg);
+    font-weight: var(--fw-medium);
     color: var(--color-text);
+    text-align: center;
 }
 
 .profile-brief .intro span{
-    margin-top: 20px;
-    margin-left: 10px;
-    font-weight: 400 ;
+    font-weight: var(--fw-medium);
     font-style: oblique;
+    font-size: var(--fs-large-xxl);
     color: var(--color-highlight);
     position: relative;
     display: inline-block;
 }
+
 .profile-brief .intro span::after {
     content: '';
     position: absolute;
@@ -80,253 +87,311 @@
 .profile-action{
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-top: 50px;
+    gap: var(--gap-sm);
 }
 
 .profile-action .resume{
-    align-items: center;
     display: flex;
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: var(--bd-radius);
     color: var(--color-text);
     cursor: pointer;
-    transition: 0.5s;
     background: var(--color-highlight);
-    padding: 6px 6px;
+    padding: var(--padding-xxxs) var(--padding-xxs);
 }
-.profile-action .resume p{
-    font-weight: 600;
-    font-size: 16px;
-    padding: 10px 20px;
+.profile-action .resume #my-resume{
+    font-size: var(--fs-small-md);
+    font-weight: var(--fw-medium);
+    padding: var(--padding-xxs) var(--padding-sm);
     cursor: pointer;
     background: var(--color-secondary);
-    border-radius: 50px;
+    border-radius: var(--bd-radius);
     color: var(--color-primary);
-    font-weight: 600;
-    font-size: 14px;
 }
 
 .profile-action span{
-    font-size: 18px;
-    margin-left: 10px;
-    border-radius: 50%;
-    padding: 6px 10px;
+    font-size: var(--fs-small-lg);
+    margin-left: var(--margin-xs);
+    border-radius: var(--logo-radius);
+    padding: var(--padding-xxxs) var(--padding-xs);
     background: var(--color-primary);
     color: var(--color-secondary);
 }
 
 .profile-action .resume:hover{
-    transform: scale(1.05);
+    transform: scale(1.01);
+    transition: 0.5s;
 }
-.profile-action .resume p:hover{
-   color: var(--color-highlight);
+.profile-action .resume:hover #my-resume{
+    transition: 0.5s;
+    color: var(--color-highlight);
 }
+.profile-action .resume:hover span{
+    transition: 0.5s;
+    color: var(--color-highlight);
+}
+
 
 .profile-action .p-anchor-link{
     cursor: pointer;
-    color: var(--color-text);
-    font-weight: 600;
-    font-size: 16px;
-    transition: 0.5s;
+    color: var(--color-secondary);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-small-md);
     text-decoration: none;
     position: relative;
 }
 
 
 .profile-action .p-anchor-link::after{
-    transition: 0.5s;
     position: absolute;
     content: '';
     left: 0;
     bottom:-1px;
     width: 100%;
     height: 2px;
-    background-color: var(--color-text);
+    background-color: var(--color-secondary);
 }
-.profile-action .p-anchor-link:hover{
-    transform: scale(1.05);
+.profile-action .connect:hover{
+    transform: scale(1.01);
+    transition: 0.5s;
+}
+.profile-action .connect:hover p{
+    transition: 0.5s;
     color: var(--color-highlight);
 }
-
-.profile-action .p-anchor-link:hover::after{
-    transform: scale(1.05);
+.profile-action .connect:hover .p-anchor-link::after{
+    transition: 0.5s;
     background-color: var(--color-highlight);
+}
+.profile-img{
+    margin: var(--margin-sm) 0;
+    border: 1px solid var(--color-secondary);
+    background: var(--color-card);
+    border-radius: var(--logo-radius);
 }
 
 .profile-img img{
-    height: 500px;
-    width: 500px;
+    border-radius: var(--logo-radius);
+    height: var(--margin-xxxl);
+    width: var(--margin-xxxl);
     object-fit: cover;
     opacity: 0.9;
     mix-blend-mode: multiply;
     filter: grayscale(10%);
 }
 
-@media(max-width:600px){
-
-    .profile{
-        flex-direction: column-reverse;
-        align-items: center;
-        margin: 20px 10px;
-        padding: 0px 20px;
-    }
-
-    .profile-brief .intro{
-        font-size: 28px;
-    }
-    
-    .profile-action{
-        display: flex;
-        gap: 16px;
-        margin-top: 20px;
-    }
-    .profile-action .resume{
-        align-items: center;
-        display: flex;
-        cursor: pointer;
-        border-radius: 50px;
-        color: var(--color-text);
-        cursor: pointer;
-        transition: 0.5s;
-        background: var(--color-highlight);
-        padding: 6px 6px;
-    }
-    .profile-action .resume p{
-        padding: 10px 10px;
-        border-radius: 50px;
-        font-weight: 600;
-        font-size: 12px;
-    }
-    
-    .profile-action span{
-        font-size: 16px;
-        border-radius: 50%;
-        padding: 4px 8px;
-    }
-
-    .profile-action .p-anchor-link{
-        font-size: 14px;
-    }
-
-    .img-container{
-        padding: 20px 0;
-    }
-
-    .profile-img{
-        border-radius: 50%;
-        background: var(--color-card);
-    }
-    
-
-    .profile-img img{
-        border-radius: 50%;
-        height: 200px;
-        width: 200px;
-        object-fit: cover;
-        opacity: 0.9;
-        mix-blend-mode: multiply;
-        filter: grayscale(10%);
-    }
-
-    
-}
-
-@media(min-width:600px) and (max-width:900px){
-
-    .profile{
-        flex-direction: column-reverse;
-        align-items: center;
-        margin: 40px 50px;
-        padding: 0px 20px;
-    }
-
-    .profile-brief .intro{
-        font-size: 38px;
-    }
-    
-    .profile-action{
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        margin-top: 20px;
-    }
-    .profile-img{
-        border-radius: 50%;
-        background: var(--color-card);
-    }
-    
-
-    .profile-img img{
-        border-radius: 50%;
-        height: 250px;
-        width: 250px;
-        object-fit: cover;
-        opacity: 0.9;
-        mix-blend-mode: multiply;
-        filter: grayscale(10%);
-    }
-}
-
 @media(min-width:900px) and (max-width:1024px){
 
     .profile{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: 40px 50px;
-        padding: 0px 20px;
+        margin: var(--margin-md) var(--margin-lg);
+        padding: var(--padding-xxs) var(--padding-md); 
+    }
+    .decorated-text-box .hello{
+        font-size: var(--fs-medium-sm);
     }
 
     .profile-brief .intro{
-        font-size: 38px;
+        font-size: var(--fs-medium-md);
     }
     
-    .profile-action{
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        margin-top: 20px;
+    .profile-brief .intro span{
+        font-size: var(--fs-large-xl);
+    }
+    .profile-action .resume #my-resume{
+        font-size: var(--fs-small-sm);
     }
     
-    .profile-img img{
-        height: 350px;
-        width: 350px;
-        object-fit: cover;
-        opacity: 0.9;
-        mix-blend-mode: multiply;
-        filter: grayscale(10%);
+    .profile-action span{
+        font-size: var(--fs-small-md);  
+    }
+    .profile-action .p-anchor-link{
+        font-size: var(--fs-small-sm);
+    }
+    .profile-img{
+        margin-bottom:var(--margin-md); 
     }
 }
 
-@media(min-width:1024px) and (max-width:1265px){
+@media(min-width:768px) and (max-width:900px){
 
     .profile{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: 40px 50px;
-        padding: 0px 20px;
+        margin: var(--margin-md) var(--margin-lg);
+        padding: var(--padding-xxs) var(--padding-md); 
+    }
+    .decorated-text-box .hello{
+        font-size: var(--fs-medium-sm);
     }
 
     .profile-brief .intro{
-        font-size: 40px;
+        font-size: var(--fs-medium-md);
     }
     
-    .profile-action{
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        margin-top: 20px;
+    .profile-brief .intro span{
+        font-size: var(--fs-large-xl);
+    }
+    .profile-action .resume #my-resume{
+        font-size: var(--fs-small-sm);
     }
     
+    .profile-action span{
+        font-size: var(--fs-small-md);  
+    }
+    .profile-action .p-anchor-link{
+        font-size: var(--fs-small-sm);
+    }
+    .profile-img{
+        margin-bottom:var(--margin-md); 
+    }
+}
 
+@media(min-width:600px) and (max-width:768px){
+
+    .profile{
+        margin: var(--margin-md) var(--margin-lg);
+        padding: var(--padding-xxs) var(--padding-md); 
+    }
+
+    .decorated-text-box .hello{
+        font-size: var(--fs-small-lg);
+    }
+
+    .profile-brief .intro{
+        font-size: var(--fs-medium-sm);
+        line-height: var(--lh-xxl);
+    }
+    
+    .profile-brief .intro span{
+        font-size: var(--fs-large-lg);
+
+    }
+    .profile-action .resume #my-resume{
+        font-size: var(--fs-xs);
+    }
+    
+    .profile-action span{
+        font-size: var(--fs-small-sm);  
+    }
+    .profile-action .p-anchor-link{
+        font-size: var(--fs-xs);
+    }
+    .profile-img{
+        margin-bottom:var(--margin-lg); 
+    }
+    
+}
+
+@media(min-width:480px) and (max-width:600px){
+
+    .profile{
+        margin: var(--margin-md) var(--margin-md);
+        padding: var(--padding-xxs) var(--padding-md); 
+    }
+
+    .decorated-text-box .hello{
+        font-size: var(--fs-small-md);
+    }
+
+    .profile-brief .intro{
+        font-size: var(--fs-small-lg);
+        line-height: var(--lh-xxl);
+    }
+    
+    .profile-brief .intro span{
+        font-size: var(--fs-large-md);
+
+    }
+    .profile-action .resume #my-resume{
+        font-size: var(--fs-xs);
+    }
+    
+    .profile-action span{
+        font-size: var(--fs-small-sm);  
+    }
+    .profile-action .p-anchor-link{
+        font-size: var(--fs-xs);
+    }
+    .profile-img{
+        margin: var(--margin-sm) 0;
+        border: 1px solid var(--color-secondary);
+        background: var(--color-card);
+        border-radius: var(--logo-radius);
+    }
+    
     .profile-img img{
-        height: 400px;
-        width: 400px;
+        border-radius: var(--logo-radius);
+        height: var(--margin-xxxl);
+        width: var(--margin-xxxl);
         object-fit: cover;
         opacity: 0.9;
         mix-blend-mode: multiply;
         filter: grayscale(10%);
     }
 }
+
+@media(max-width:480px){
+
+    .profile{
+        margin: var(--margin-md) var(--margin-md);
+        padding: var(--padding-xxs) var(--padding-md); 
+    }
+
+    .decorated-text-box .hello{
+        font-size: var(--fs-small-md);
+    }
+
+    .profile-brief .intro{
+        font-size: var(--fs-small-lg);
+        line-height: var(--lh-xxl);
+    }
+    
+    .profile-brief .intro span{
+        font-size: var(--fs-large-md);
+
+    }
+    .profile-action .resume #my-resume{
+        font-size: var(--fs-xs);
+    }
+    
+    .profile-action span{
+        font-size: var(--fs-small-sm);  
+    }
+    .profile-action .p-anchor-link{
+        font-size: var(--fs-xs);
+    }
+    .profile-img{
+        margin: var(--margin-sm) 0;
+        border: 1px solid var(--color-secondary);
+        background: var(--color-card);
+        border-radius: var(--logo-radius);
+    }
+    
+    .profile-img img{
+        border-radius: var(--logo-radius);
+        height: var(--margin-sm-profile);
+        width: var(--margin-sm-profile);
+        object-fit: cover;
+        opacity: 0.9;
+        mix-blend-mode: multiply;
+        filter: grayscale(10%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

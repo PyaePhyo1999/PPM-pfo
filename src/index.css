@@ -4,11 +4,94 @@
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 :root {
+  /* 🎨 Colors */
   --color-primary: #F5F5F5;
   --color-secondary: #00246B;
   --color-text: #111111;
   --color-card: #FFFFFF;   
   --color-highlight: #8AAAE5;
+  --color-input-autofill: #1A3A78;
+  --color-secondary-transparent: rgba(138, 170, 229, 0.5);
+  --color-text-highlight: rgb(135, 127, 127);
+  --color-error:#a22e39;
+  --color-success:#13ca3e;
+  --color-footer-text:rgb(115, 108, 108);
+  --color-input-bg :rgba(255, 255, 255, 0.1);
+
+  /* 🎨 Color Filter */
+  --filter-highlight: invert(75%) sepia(12%) saturate(1000%) hue-rotate(192deg) brightness(97%) contrast(90%);
+  --filter-secondary: invert(9%) sepia(94%) saturate(1216%) hue-rotate(199deg) brightness(90%) contrast(101%);
+
+
+  /* 📏 Margin */
+  --margin-xs: 8px;
+  --margin-sm: 16px;
+  --margin-md: 24px;
+  --margin-lg: 48px;
+  --margin-xl: 96px;
+  --margin-xxl: 150px;
+  --margin-xxxl: 250px;
+  --margin-sm-profile: 200px;
+  /* corner-block */
+  --margin-cb-xs:-4px;
+  --margin-cb-sm:-8px;
+
+  /* 📏 Padding */
+  --padding-xxxs: 6px;
+  --padding-xxs: 8px;
+  --padding-xs: 10px;
+  --padding-sm: 16px;
+  --padding-md: 24px;
+  --padding-lg: 48px;
+  --padding-xl: 96px;
+
+    /* 📏 light-height */
+
+    --lh-xs: 14px;
+    --lh-sm: 16px;
+    --lh-md: 18px;
+    --lh-lg: 24px;
+    --lh-xl: 30px;
+    --lh-xxl:40px;
+
+  /* 🔠 Font Weight */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 600;
+  --fw-bold-ext: 800;
+
+  /* 🔡 Font Sizes */
+  --fs-xs: 12px;
+  --fs-small-sm: 14px;
+  --fs-small-md: 16px;
+  --fs-small-lg: 18px;
+
+  --fs-medium-sm: 20px;
+  --fs-medium-md: 22px;
+  --fs-medium-lg: 24px;
+
+  --fs-large-sm: 28px;
+  --fs-large-md: 32px;
+  --fs-large-lg: 36px;
+  --fs-large-xl:40px;
+  --fs-large-xxl:48px;
+  --fs-large-xxxl:250px;
+
+  /* radius */
+  --bd-radius-sm:10px;
+  --bd-radius-md:12px;
+  --bd-radius-lg:14px;
+  --bd-radius:50px;
+  --logo-radius:50%;
+
+  /* flex-gap */
+  --gap-xs: 8px;
+  --gap-sm: 16px;
+  --gap-md: 24px;
+  --gap-lg: 48px;
+  --gap-xl: 96px;
+  
 }
 
 *{

@@ -9,11 +9,11 @@ const Contact = () => {
     
     const validateForm = (formData) => {
         const newErrors = {};
-        if (!formData.get('name')) newErrors.name = 'Name is required';
-        if (!formData.get('email')) newErrors.email = 'Email is required';
+        if (!formData.get('name')) newErrors.name = 'Name is required...';
+        if (!formData.get('email')) newErrors.email = 'Email is required...';
         else if (!/^\S+@\S+\.\S+$/.test(formData.get('email'))) 
           newErrors.email = 'Invalid email format';
-        if (!formData.get('message')) newErrors.message = 'Message is required';
+        if (!formData.get('message')) newErrors.message = 'Message is required...';
         
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -120,18 +120,21 @@ const Contact = () => {
                 <form onSubmit={onSubmit} className='contact-right'>
                     <label htmlFor=''>Your Name</label>
                     <div>
-                    <input type='text' name='name' placeholder='Ex. John Doe'  className={errors.name ? 'error' : ''}/>
-                    {errors.name && <span className="error-message">{errors.name}</span>}
+                    <input type='text' name='name'  placeholder={errors.name ? errors.name : 'Ex. John'}   
+                     className={`input ${errors.name ? 'input-error' : ''}`}
+                    />
                     </div>
                     <label htmlFor=''>Your Email</label>
                     <div>
-                    <input type='text' name='email' placeholder='example@gmail.com'  className={errors.email ? 'error' : ''}/>
-                    {errors.email && <span className="error-message">{errors.email}</span>}
+                    <input type='text' name='email'  placeholder={errors.email ? errors.email : 'example@gmail.com'} 
+                      className={`input ${errors.email ? 'input-error' : ''}`}/>
                     </div>
                     
                     <label htmlFor=''>Write Your Message Here</label>
                     <div>
-                    <textarea rows="8" name='message' placeholder='Enter here...' className={errors.message ? 'error':''}/>
+                    <textarea rows="8" name='message' placeholder={errors.message ? errors.message : 'Enter here...'} 
+                         className={`input ${errors.message ? 'input-error' : ''}`}
+                    />
 
                     </div>
                     <div className='submit-section'>
@@ -141,16 +144,17 @@ const Contact = () => {
                             </button> <span>&#x27A4;</span>
                              
                     </div>
-                   
-                    </div>
-                    {/* Auto-disappearing alert */}
+                      {/* Auto-disappearing alert */}
                     {submitStatus && (
                         <div className={`alert ${submitStatus} ${submitStatus ? 'visible' : ''}`}>
                             {submitStatus === 'success' 
                                 ? 'Message sent successfully!' 
-                                : 'Please, state your reason.'}
+                                : ''}
                         </div>
                          )}
+                   
+                    </div>
+                  
                 </form>
                
         </div>

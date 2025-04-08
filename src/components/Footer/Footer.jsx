@@ -158,7 +158,8 @@ const Footer = () => {
                 <h3 id='info'>Get the latest Information</h3> 
                 <div className='user-email'>
                     <i class="fa-solid fa-user"></i>
-                    <input type='text' name='email' placeholder='Email Address' id='footer-email' className={errors.email ? 'error-mail-footer' : ''}/>
+                    <input type='text' name='email' placeholder={errors.email ? errors.email : 'Email address'} id='footer-email' 
+                    className={errors.email ? 'error-mail-footer' : ''}/>
                    
                     
                     <button type="submit" disabled={isLoading} className='sent-email'>
@@ -166,7 +167,6 @@ const Footer = () => {
                         </button>
                 
                 </div>
-                {errors.email && <span className="error-message">{errors.email}</span>}
                 {submitStatus && (
                         <div className={`alert-message ${submitStatus} ${submitStatus ? 'visible' : ''}`}>
                             {submitStatus === 'success' 

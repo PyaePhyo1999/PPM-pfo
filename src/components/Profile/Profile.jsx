@@ -20,12 +20,12 @@ const Profile = () => {
                 <div class="corner-block bottom-right"></div>
                 <p className='hello'>Hello There!</p>
           </div>
-          <div className='intro'><p>I'm<span> Pyae Phyo,</span></p>
-               <p>AI and Data Analyst</p>
-               <p>Base in Myanmar.</p>
+          <div className='intro'><p>I'm <span> Pyae Phyo,</span></p>
+               <p><span>AI and Data Analyst </span> Base in Thailand.</p>
+              
             </div> 
             <div className='profile-action'>
-                <div className='resume' onClick={viewResume}> <p>My Resume</p><span>&#x27A4;</span></div>
+                <div className='resume' onClick={viewResume}><AnchorLink id='my-resume'>My Resume</AnchorLink><span>&#x27A4;</span></div>
                 <div className='connect'><AnchorLink className='p-anchor-link' offset={10} href='#contact'><p>Connect with me &#x2192;</p></AnchorLink></div>
             </div>
         </div>

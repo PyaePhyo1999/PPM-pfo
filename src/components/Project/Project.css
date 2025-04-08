@@ -5,34 +5,35 @@
 .project-container{
     display: flex;
     flex-direction: column;
-    margin: 0 150px;
-    padding: 60px 0;
+    margin: 0 var(--margin-xxl);  
+    padding: var(--padding-xl) 0;
 }
 
 .project-title h1{
     color: var(--color-text);
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-medium-lg);
 }
 
 .project-title #icon{
     color: var(--color-highlight);
 }
+
 .project-title p{
-    font-weight: 600;
-    font-size: 40px;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-large-xl);
 }
 .project-title #project-txt{
-    font-weight: 500;
     font-style: italic;
     color: var(--color-highlight);
+    font-weight: var(--fw-medium);
 }
 
 .project-section {
-    padding: 40px 0;
+    padding: var(--padding-lg) 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: var(--gap-md);
 }
 
 .project-format{
@@ -41,11 +42,12 @@
     align-items: center;
     justify-content: center;
     background: var(--color-card);
-    padding: 20px;
+    padding: var(--padding-lg);
     transition: 0.4s;
-    border-radius: 10px;
+    border-radius: var(--bd-radius-md);
 }
 .project-format img{
+    border-radius: var(--bd-radius-md);
     box-sizing: border-box;
     width: 100%;
 }
@@ -53,20 +55,20 @@
 .project-format .genre-item{
     display: flex;
     align-items: center;
-    padding: 8px 0;
-    gap: 6px;
+    padding: var(--padding-sm) 0;
+    gap: var(--gap-xs);
 }
 
 .project-format .genre-item p{
-    font-size: 16px;
-    font-weight: 600;
+    font-size: var(--fs-small-md);
+    color: var(--color-card);
+    font-weight: var(--fw-bold);
     background: var(--color-highlight);
-    padding: 6px 14px;
-    border-radius: 50px;
+    padding: var(--padding-xs) var(--padding-sm);
+    border-radius: var(--bd-radius);
 }
 
 .project-format .brief{
-    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,18 +76,19 @@
 
 .project-format .brief h4{
     width: 80%;
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: var(--fw-medium);
+    font-size:var(--fs-medium-md);
+    color: var(--color-secondary);
 }
 
 .project-format .brief .see-more{
     background: var(--color-secondary);
-    border-radius: 50%;
-    padding: 4px 6px;
+    border-radius: var(--logo-radius);
+    padding: var(--padding-xxxs) var(--padding-xxs);
 }
 .project-format .brief #icon{
-    filter: invert(87%) sepia(18%) saturate(630%) hue-rotate(195deg) brightness(96%) contrast(93%);
-    width: 22px;
+    filter:var(--filter-highlight);
+    width: var(--margin-md);
     padding-top: 2px;
 }
 
@@ -98,9 +101,6 @@
     filter: brightness(0) invert(1);
 }
 
-.project-format p:hover{
-    color: var(--color-primary);
-}
 
 @media(max-width:600px){
     

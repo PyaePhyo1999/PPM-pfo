@@ -7,8 +7,8 @@
 .about-container{
     display: flex;
     flex-direction: column;
-    margin: 0 150px;
-    padding: 60px 0;
+    margin: 0 var(--margin-xxl);  
+    padding: var(--padding-xl) 0;
 }
 
 .about-title{
@@ -17,9 +17,10 @@
     align-items: center;
     justify-content: center;
 }
+
 .about-title h1{
-    font-weight: 600;
-    font-size: 24px;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-medium-lg);
 }
 
 .about-title span{
@@ -27,130 +28,125 @@
 }
 
 .about-section {
-    padding: 40px 0;
+    padding-top: var(--padding-lg);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: var(--gap-xl);
 }
 
-.about-section-left{
-    flex-basis: 30%;
+.about-section-left i{
+    font-size: var(--fs-large-xxxl);
+    background: linear-gradient(270deg, var(--color-primary) 50%, var(--color-highlight) 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.about-section-left p{
-    color: var(--color-primary);
-    font-size: 16px;
-    line-height: 34px;  
-    font-weight: 500;
-}
-
-.about-section-right{
-    flex-basis: 60%;
-}
 .skills{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--gap-sm);
 }
 
 .skill{
     display: flex;
-    gap: 20px;
+    gap: var(--gap-sm);
     align-items: center;
-    transition: 0.3;
+    transition: 0.5s;
 }
 
 .skill p{
-    min-width: 150px;
-    font-size: 16px;
-    font-weight: 500;
+    min-width: 140px;
+    font-size: var(--fs-small-md);
+    font-weight: var(--fw-medium);
     color: var(--color-primary);
 }
 
 .skill hr{
     outline: none;
     border: none;
-    height: 8px;
-    border-radius: 50px;
+    height: var(--padding-xxxs);
+    border-radius: var(--bd-radius);
     background: linear-gradient(265deg,var(--color-primary) -5.09%,var(--color-highlight) 106.28%)
 }
+
 .milestones{
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: baseline;
+    gap: var(--gap-sm);
+    margin: var(--margin-md) 0;
 }
 
 .milestone{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 10px 0;
-    gap: 10px;
+    gap: var(--gap-xs);
     transition: 0.5s;
 }
 
 .milestone h1{
-    font-weight: 700;
-    font-size: 30px;
+    font-weight: var(--fw-bold);
+    font-size:var(--fs-medium-md);
     color: var(--color-highlight);
 }
 
 .milestone p{
-    font-size: 16px;
-    font-weight: 500;
+    font-size: var(--fs-small-md);
+    font-weight: var(--fw-medium);
     color: var(--color-primary);
 }
 
 .about-action{
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-top: 20px;
+    gap: var(--gap-sm);
 }
 
 .about-action .download-cv{
-    align-items: center;
     display: flex;
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: var(--bd-radius);
     color: var(--color-text);
     cursor: pointer;
-    transition: 0.5s;
     background: var(--color-highlight);
-    padding: 6px 6px;
+    padding: var(--padding-xxxs) var(--padding-xxs);
 }
 .about-action .download-cv p{
-    font-weight: 600;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: var(--fs-small-md);
+    font-weight: var(--fw-medium);
+    padding: var(--padding-xxs) var(--padding-sm);
     cursor: pointer;
     background: var(--color-secondary);
-    border-radius: 50px;
+    border-radius: var(--bd-radius);
     color: var(--color-primary);
-    font-weight: 600;
-    font-size: 14px;
 }
 
 .about-action span{
-    font-size: 18px;
-    margin-left: 10px;
-    border-radius: 50%;
-    padding: 6px 10px;
+    font-size: var(--fs-small-lg);
+    margin-left: var(--margin-xs);
+    border-radius: var(--logo-radius);
+    padding: var(--padding-xxxs) var(--padding-xs);
     background: var(--color-primary);
     color: var(--color-secondary);
 }
 
 .about-action .download-cv:hover{
-    transform: scale(1.05);
+    transform: scale(1.01);
+    transition: 0.5s;
+    color: var(--color-primary);
 }
-.about-action .download-cv p:hover{
-   color: var(--color-highlight);
-}
-.about-action .download-cv span:hover{
+.about-action .download-cv:hover p{
+    transition: 0.5s;
     color: var(--color-highlight);
- }
+}
+.about-action .download-cv:hover span{
+    transition: 0.5s;
+    color: var(--color-highlight);
+}
  
- .about-action #signature{
+.about-action #signature{
     color: var(--color-highlight);
     font-family: 'Dancing Script', cursive;
     font-size: 20px;

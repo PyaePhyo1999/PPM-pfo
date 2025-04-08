@@ -5,33 +5,33 @@
 .service-container{
     display: flex;
     flex-direction: column;
-    margin: 0 150px;
-    padding: 60px 0;
+    margin: 0 var(--margin-xxl);  
+    padding: var(--padding-xl) 0;
 }
 
 .service-title h1{
     color: var(--color-text);
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-medium-lg);
 }
 
 .service-title #icon{
     color: var(--color-highlight);
 }
 .service-title p{
-    font-weight: 600;
-    font-size: 40px;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-large-xl);
 }
 .service-title #service-txt{
     font-style: italic;
     color: var(--color-highlight);
-    font-weight: 500;
+    font-weight: var(--fw-medium);
 }
 .service-section {
-    padding: 40px 0;
+    padding: var(--padding-lg) 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: var(--gap-sm);
 }
 
 .service-format{
@@ -41,24 +41,24 @@
     align-items: center;
     justify-content: center;
     background: var(--color-primary);
-    padding: 40px;
+    padding: var(--padding-lg);
     transition: 0.4s;
     border-radius: 10px;
 }
 
 .service-format h3{
-    font-weight: 800;
-    font-size: 28px;
-    background: linear-gradient(270deg, var(--color-secondary) 50%, var(--color-text) 100%);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-medium-lg);
+    background: linear-gradient(270deg, var(--color-highlight) 20%, var(--color-secondary) 90%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 10px 0;
+    margin: var(--margin-sm) 0;
 }
 
 .service-format .icon{
     display: inline-flex;
-    padding: 20px 20px;
+    padding: var(--padding-sm);
     background: var(--color-card);
     border-radius: 50%;
 }
@@ -71,28 +71,28 @@
 }
 
 .service-format p{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-weight: var(--fw-medium);
+    font-size: var(fs-small-md);
+    line-height: var(--lh-lg);
 }
 
 .service-format .read-more{
     display: flex;
     align-items: center;
-    margin-top: 12px;
-    gap: 4px;
+    margin: var(--margin-xs) 0;
+    gap: var(--gap-xs);
 }
 
 .service-format .read-more h4{
-    font-weight: 800;
-    font-size: 16px;
+    font-weight: var(--fw-bold);
+    font-size: var(fs-small-lg);
     color: var(--color-secondary);
 }
 
 
 .service-format .read-more img{
-    filter: invert(87%) sepia(18%) saturate(630%) hue-rotate(195deg) brightness(96%) contrast(93%);
-    width: 22px;
+    filter: var(--filter-highlight);
+    width: var(--fs-medium-md);
 }
 
 
@@ -104,6 +104,10 @@
 .service-format .read-more:hover h4{
     color: var(--color-highlight);
 }
+.service-format .read-more:hover img{
+   filter: var(--filter-secondary);
+}
+
 
 @media(max-width:600px){
     .service-container{
