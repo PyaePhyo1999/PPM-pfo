@@ -177,34 +177,34 @@
   }
   
 .modal {
-    background: var(--color-secondary);
-    padding: 20px;
-    border-radius: 8px;
+    background: var(--color-primary);
+    padding: var(--padding-md);
+    border-radius: var(--bd-radius-sm);
     max-width: 400px;
 }
   
 .modal h3{
-    color: var(--color-primary);
-    font-weight: 500;
-    font-size: 22px;
+    color: var(--color-highlight);
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-large-sm);
     padding: 8px 0;
 }
 
 .modal span{
-    color: var(--color-highlight);
+    color: var(--color-secondary);
 }
 
 .modal p{
     padding: 4px 0;
-    color: var(--color-primary);
-    font-weight: 400;
-    font-size: 16px;
+    color: var(--color-highlight);
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-small-md);
 }
 
 .modal-buttons {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    gap: var(--gap-xs);
+    margin-top: var(--margin-xs);
 }
 
 .modal-buttons button{
@@ -220,164 +220,190 @@
     border: 1px solid var(--color-primary);
 }
 
+@media(min-width:1024px) and (max-width:1260px){
+    
+    .about-container{
+        margin: 0 var(--margin-lg);
+        padding: var(--padding-xl) 0;
+    }
+
+}
+
+@media(min-width:900px) and (max-width:1024px){
+
+    .about-container{
+        margin: 0 var(--margin-lg);
+        padding: var(--padding-xl) 0;
+    }
+
+    .about-title h1{
+        font-size: var(--fs-medium-sm);
+    }
+    
+    .about-section {
+        gap: var(--gap-lg);
+    }
+    
+    .skill p{
+        min-width: 130px;
+        font-size: var(--fs-small-sm);
+    }
+    
+    .milestones{
+        display: flex;
+        justify-content: baseline;
+        gap: var(--gap-sm);
+        margin: var(--margin-md) 0;
+    }
+    
+    .milestone h1{
+        font-size:var(--fs-medium-sm);
+    }
+    
+    .milestone p{
+        font-size: var(--fs-small-sm);
+    }
+
+    .about-action .download-cv p{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .about-action span{
+        font-size: var(--fs-small-md);
+    }
+
+}
+@media(min-width:600px) and (max-width:900px){
+
+    .about-container{
+        margin: 0 var(--margin-lg);
+        padding: var(--padding-xl) 0;
+    }
+
+    .about-title h1{
+        font-size: var(--fs-medium-sm);
+    }
+    
+    .about-section {
+        gap: var(--gap-lg);
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-section-left i{
+        font-size: var(--fs-sm-icon);
+        background: linear-gradient(
+            270deg,
+            color-mix(in srgb, var(--color-primary) 50%, transparent),
+            color-mix(in srgb, var(--color-secondary) 80%, transparent) 80%
+          );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .skills{
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-sm); 
+        margin-top: -250px;
+    }
+   
+    
+    .skill p{
+        min-width: 130px;
+        font-size: var(--fs-small-sm);
+    }
+    
+    .milestones{
+        display: flex;
+        justify-content: baseline;
+        gap: var(--gap-sm);
+        margin: var(--margin-md) 0;
+    }
+    
+    .milestone h1{
+        color: var(--color-primary);
+        font-size:var(--fs-medium-sm);
+    }
+    
+    .milestone p{
+        font-size: var(--fs-small-sm);
+    }
+
+    .about-action .download-cv p{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .about-action span{
+        font-size: var(--fs-small-md);
+    }
+    
+}
+
 @media(max-width:600px){
 
     .about-container{
-        margin: 0 30px;
+        margin: 0 var(--margin-md);
+        padding: var(--padding-xl) 0;
     }
 
     .about-title h1{
-        font-size: 20px;
+        font-size: var(--fs-medium-sm);
     }
     
     .about-section {
-        padding: 20px 0;
+        gap: var(--gap-lg);
         flex-direction: column;
-        align-items: baseline;
-    }
-     
-    .about-section-left p{
-        width: 100%;
-        font-size: 16px;
-        line-height: 30px;  
-    }
-    
-    .about-section-right{
-        width: 100%;
-        margin-top: 20px;
-    }
-  
-    .milestones{
-        margin-top: 20px;
-    }
-    
-    .milestone h1{
-        font-size: 18px;
-    }
-    
-    .milestone p{
-        text-align: center;
-        font-size: 14px;
-    }
-    
-    .milestones hr{
-        height: 70px;
-        margin: 10px 0;
-    }
-    .about-action .download-cv p{
-        font-size: 14px;
-    }
-
-    .about-action span{
-        font-size: 16px;
-    }
- 
-    .about-action #signature{
-         font-size: 16px; 
-    }
-}
-
-
-@media(min-width:600px) and (max-width:1024px){
-
-    .about-container{
-        margin: 0 50px;
-    }
-
-    .about-title h1{
-        font-size: 20px;
-    }
-    
-    .about-section {
-        padding: 20px 0;
-        flex-direction: column;
-        align-items: baseline;
-    }
-     
-    .about-section-left p{
-        width: 100%;
-        font-size: 16px;
-        line-height: 30px;  
-    }
-    
-    .about-section-right{
-        width: 100%;
-        margin-top: 20px;
-    }
-  
-    .milestones{
-        margin-top: 20px;
-    }
-    
-    .milestone h1{
-        font-size: 20px;
-    }
-    
-    .milestone p{
-        text-align: center;
-        font-size: 16px;
-    }
-    
-    .milestones hr{
-        height: 80px;
-        margin: 10px 0;
-    }
-    
-}
-
-    
-@media(min-width:1024px) and (max-width:1260px){
-
-    .about{
-        background: var(--color-secondary);
-    }
-    
-    .about-container{
-        margin: 0 50px;
-    }
-
-    .about-section {
-        padding: 40px 0;
-        display: flex;
-        justify-content: space-between;
         align-items: center;
     }
-    
-    .about-section-left p{
-        color: var(--color-primary);
-        font-size: 16px;
-        line-height: 30px;  
-        font-weight: 500;
+    .about-section-left i{
+        font-size: var(--fs-sm-icon);
+        background: linear-gradient(
+            270deg,
+            color-mix(in srgb, var(--color-primary) 50%, transparent),
+            color-mix(in srgb, var(--color-secondary) 80%, transparent) 80%
+          );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     
     .skills{
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: var(--gap-sm); 
+        margin-top: -250px;
+    }
+    
+    .skill p{
+        min-width: 130px;
+        font-size: var(--fs-small-sm);
+    }
+    
+    .milestones{
+        text-align: center;
+        display: flex;
+        justify-content: baseline;
+        gap: var(--gap-sm);
+        margin: var(--margin-md) 0;
     }
     
     .milestone h1{
-        font-weight: 700;
-        font-size: 24px;
-        color: var(--color-highlight);
+        color: var(--color-primary);
+        font-size:var(--fs-medium-sm);
     }
     
     .milestone p{
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--color-primary);
+        font-size: var(--fs-small-sm);
     }
-    
-    .about-action{
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        margin-top: 20px;
-    }
-    
-     .about-action #signature{
-        font-size: 18px;
-     }
 
+    .about-action .download-cv p{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .about-action span{
+        font-size: var(--fs-small-md);
+    }
 }
+
+    
 

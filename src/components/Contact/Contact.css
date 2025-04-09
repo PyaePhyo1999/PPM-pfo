@@ -123,7 +123,6 @@ input:-webkit-autofill {
     -webkit-text-fill-color: var(--color-card); /* Change text color */
 }
 
-  
 .contact-right textarea{
     font-weight: var(--fw-bold);
     width: 500px;
@@ -209,190 +208,201 @@ input:-webkit-autofill {
 .alert.error {
     color: var(--color-error);
 }
-  
-@media(max-width:600px){
 
-    .contact-container{  
-        margin: 0 30px;
+@media(min-width:1024px) and (max-width:1260px){
+    
+    .contact-container{
+        margin: 0 var(--margin-lg);
+        padding: var(--padding-xl) 0;
+    }
+}
+@media(min-width:900px) and (max-width:1024px){
+    
+    .contact-container{
+        margin: 0 var(--margin-lg);
+        padding: var(--padding-xl) 0;
     }
     
     .contact-title h1{
-        padding: 10px 0;
-        font-size: 20px;
+        font-size: var(--fs-medium-md);
     }
     
     .contact-left p{
-        font-size: 32px;
+        font-size: var(--fs-large-md);
+
     }
     
+    .contact-section{
+        display: flex;
+        gap: var(--gap-md);
+    }
+    
+    .contact-left #contact-brief{
+        font-size: var(--fs-medium-sm);
+    }
+    
+    .contact-detail i{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .contact-detail p{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .contact-right label{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .contact-right input{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .contact-right textarea{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .contact-right button{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .contact-right .submit span{
+        font-size: var(--fs-small-md);
+    }
+    
+    .alert {
+        font-size: var(--fs-small-sm); /* Adjust size as needed */
+    }
+    
+}
+
+@media(min-width:700px) and (max-width:900px){
+    .contact-container{
+        margin: 0 var(--margin-lg);
+        padding: var(--padding-xl) 0;
+    }
+
     .contact-section{
         display: flex;
         flex-direction: column;
         gap: 40px;
     }
     
-
-    .contact-left #contact-brief{
-        font-size: 16px;
-    }
-    
-    .contact-detail i{
-        font-size: 14px;
-    }
-    
-    .contact-detail p{
-        font-size: 16px;
-    }
-    
-
-    .contact-right label{
-       font-size: 16px;
-    }
-    
-    .contact-right input{
-        width: 300px;
-        font-size: 14px;
-    }
-    
-    .contact-right textarea{
-        width: 300px;
-        font-size: 14px;
-    }
-
-    .contact-right button{
-        font-size: 12px;
-        padding: 10px 12px;
-    }
- 
-    
-    .contact-right .submit span{
-        font-size: 16px;
-    }   
-  
-}
-
-@media(min-width:600px) and (max-width:900px){
-
-    .contact-container{  
-        margin: 0 50px;
-    }
-    
     .contact-title h1{
-        padding: 10px 0;
-        font-size: 20px;
+        font-size: var(--fs-medium-md);
     }
     
     .contact-left p{
-        font-size: 32px;
+        font-size: var(--fs-large-md);
     }
     
+    .contact-section{
+        display: flex;
+        gap: var(--gap-md);
+    }
+    
+    .contact-left #contact-brief{
+        font-size: var(--fs-medium-sm);
+    }
+    
+    .contact-detail i{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .contact-detail p{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .contact-right label{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .contact-right input{
+        width: 400px;
+        font-size: var(--fs-small-sm);
+    }
+    
+    .contact-right textarea{
+        width: 400px;
+        font-size: var(--fs-small-sm);
+    }
+    
+    .contact-right button{
+        font-size: var(--fs-small-sm);
+    }
+    
+    .contact-right .submit span{
+        font-size: var(--fs-small-md);
+    }
+    
+    .alert {
+        font-size: var(--fs-small-sm); /* Adjust size as needed */
+    }
+
+}
+
+
+@media(max-width:700px){
+
+    .contact-container{  
+        margin: 0 var(--margin-md);
+    }
     .contact-section{
         display: flex;
         flex-direction: column;
-        gap: 40px;
-    }
-    
-
-    .contact-left #contact-brief{
-        padding: 10px 0;
-        font-weight: 400;
-        font-size: 18px;
-        color: var(--color-card);
-    }
-    
-    .contact-detail i{
-        font-size: 14px;
-    }
-    
-    .contact-detail p{
-        font-size: 16px;
-    }
-    
-    .contact-right label{
-       font-size: 18px;
-    }
-    
-    .contact-right input{
-        width: 350px;
-        font-size: 16px;
-    }
-    
-    .contact-right textarea{
-        width: 350px;
-        font-size: 16px;
-    }
-
-
-    .contact-right button{
-        font-size: 14px;
-    }
-    
-    
-    .contact-right .submit span{
-        font-size: 18px;
-    }   
-
-}
-
-@media(min-width:900px) and (max-width:1260px){
-
-    .contact-container{  
-        margin: 0 50px;
+        gap: var(--gap-md);
     }
     
     .contact-title h1{
-        padding: 10px 0;
-        font-size: 20px;
+        font-size: var(--fs-medium-md);
     }
     
     .contact-left p{
-        font-size: 32px;
+        font-size: var(--fs-large-md);
     }
     
     .contact-section{
         display: flex;
-        gap: 40px;
+        gap: var(--gap-md);
     }
     
-
     .contact-left #contact-brief{
-        padding: 10px 0;
-        font-weight: 400;
-        font-size: 18px;
-        color: var(--color-card);
+        font-size: var(--fs-medium-sm);
     }
     
     .contact-detail i{
-        font-size: 14px;
+        font-size: var(--fs-small-sm);
     }
     
     .contact-detail p{
-        font-size: 16px;
+        font-size: var(--fs-small-sm);
     }
     
     .contact-right label{
-       font-size: 18px;
+        font-size: var(--fs-small-sm);
     }
     
     .contact-right input{
-        width: 450px;
-        font-size: 16px;
+        width: 320px;
+        font-size: var(--fs-small-sm);
     }
     
     .contact-right textarea{
-        width: 450px;
-        font-size: 16px;
-    }
-
-
-    .contact-right button{
-        font-size: 14px;
+        width: 320px;
+        font-size: var(--fs-small-sm);
     }
     
+    .contact-right button{
+        font-size: var(--fs-small-sm);
+    }
     
     .contact-right .submit span{
-        font-size: 18px;
-    }   
-
+        font-size: var(--fs-small-md);
+    }
+    
+    .alert {
+        font-size: var(--fs-small-sm); /* Adjust size as needed */
+    } 
+  
 }
+
 

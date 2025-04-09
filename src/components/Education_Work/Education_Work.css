@@ -110,18 +110,90 @@
     text-decoration: none;
 }
 
-@media(max-width:600px){
+@media(min-width:1048px) and (max-width:1260px){
 
     .edu-exp-container{
-        margin: 0 30px;
-    }
+        margin: 0 var(--margin-lg);  
+        padding: var(--padding-xl) 0;
+    } 
+    
+}
+
+@media(min-width:900px) and (max-width:1048px){
+
+    .edu-exp-container{
+        margin: 0 var(--margin-lg);  
+        padding: var(--padding-lg) 0;
+    } 
     
     .edu-exp-title h1{
-        font-size: 20px;
+        font-size: var(--fs-medium-md);
     }
     
     .edu-exp-title p{
-        font-size: 28px;
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-large-md);
+    }
+    
+    .title h1{
+        font-size: var(--fs-medium-md);
+    }
+    
+    .title i{
+        font-size: var(--fs-medium-sm);
+    }
+
+
+    .format h2{
+        font-size: var(--fs-medium-sm);
+    }
+    
+    .format p{
+        font-size: var(--fs-small-lg);
+      
+    }
+    
+}
+
+@media(min-width:700px) and (max-width:900px){
+
+    .edu-exp-container{
+        margin: 0 var(--margin-md);  
+        padding: var(--padding-lg) 0;
+    } 
+    
+    .edu-exp-title h1{
+        font-size: var(--fs-medium-md);
+    }
+    
+    .edu-exp-title p{
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-large-md);
+    }
+    
+    .title h1{
+        font-size: var(--fs-medium-md);
+    }
+    
+    .title i{
+        font-size: var(--fs-medium-sm);
+    }
+
+    .format h2{
+        font-size: var(--fs-medium-sm);
+    }
+    
+    .format p{
+        font-size: var(--fs-small-lg);
+    }
+    
+}
+
+
+@media(max-width:700px){
+
+    .edu-exp-container{
+        margin: 0 var(--margin-md);
     }
     
     .edu-exp-detail{
@@ -129,110 +201,34 @@
         flex-direction: column;
         gap: 20px;
         justify-content: center;
-        padding: 40px 0;
-    }
-    
-    .title h1{
-        font-size: 28px;
-    }
-    
-    .title i{
-        font-size: 18px;
-        padding: 12px 10px;
-    }
-  
-    .format h1{
-        font-size: 18px;
-    }
-    
-    .format p{
-        font-size: 16px;
-    }
-    
-}
-
-
-@media(min-width:600px) and (max-width:768px){
-
-    .edu-exp-container{
-        margin: 0 50px;
     }
     
     .edu-exp-title h1{
-        font-size: 20px;
+        font-size: var(--fs-medium-md);
     }
     
     .edu-exp-title p{
-        font-size: 32px;
-    }
-    
-    .edu-exp-detail{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-        padding: 40px 0;
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-large-md);
     }
     
     .title h1{
-        font-size: 32px;
+        font-size: var(--fs-medium-md);
     }
     
     .title i{
-        font-size: 20px;
-        padding: 12px 10px;
+        font-size: var(--fs-medium-sm);
     }
-  
-    .format h1{
-        font-size: 20px;
+
+    .format h2{
+        font-size: var(--fs-medium-sm);
     }
     
     .format p{
-        font-size: 16px;
-    }
-    
-}
-
-@media(min-width:768px) and (max-width:1260px){
-
-    .edu-exp-container{
-        margin: 0 50px;
-    }
-    
-
-    .edu-exp-title h1{
-        font-weight: 700;
-        font-size: 20px;
-    }
-    .edu-exp-title #icon{
-        color: var(--color-highlight);
-    }
-    .edu-exp-title p{
-        font-weight: 600;
-        font-size: 32px;
-    }
-
-    .edu-exp-detail{
-        gap: 20px;
-    }
-    
-    .title h1{
-        font-size: 32px;
-    }
-    
-    .title i{
-        font-size: 20px;
-    }
-    
-    .format h1{
-        font-size: 20px;
-
-    }
-    
-    .format p{
-        font-size: 16px;
-
+        font-size: var(--fs-small-lg);
     }
     
     
 }
+
+

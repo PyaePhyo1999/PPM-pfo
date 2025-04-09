@@ -11,7 +11,7 @@
   --color-card: #FFFFFF;   
   --color-highlight: #8AAAE5;
   --color-input-autofill: #1A3A78;
-  --color-secondary-transparent: rgba(138, 170, 229, 0.5);
+  --color-secondary-transparent: rgba(166, 184, 216, 0.9);
   --color-text-highlight: rgb(135, 127, 127);
   --color-error:#a22e39;
   --color-success:#13ca3e;
@@ -76,6 +76,8 @@
   --fs-large-lg: 36px;
   --fs-large-xl:40px;
   --fs-large-xxl:48px;
+  --fs-xs-icon:150px;
+  --fs-sm-icon:180px;
   --fs-large-xxxl:250px;
 
   /* radius */
