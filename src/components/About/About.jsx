@@ -31,22 +31,22 @@ const About = () => {
                <div className='skill'><p>Web Development</p><hr style = {{width:"30%"}}/></div>
                <div className='skill'><p>HTML & CSS</p><hr style = {{width:"50%"}}/></div>
                <div className='skill'><p>Data Analytics</p><hr style = {{width:"60%"}}/></div>
-               <div className='skill'><p>Machine Learning</p><hr style = {{width:"40%"}}/></div>
+               <div className='skill'><p>Machine Learning</p><hr style = {{width:"20%"}}/></div>
             </div>    
             <div className='milestones'>
                 <div className='milestone'>
-                  <h1>1+</h1>
-                  <p>YEARS OF EXPERIENCE</p>
+                  <h1>6+</h1>
+                  <p>MONTHS OF EXPERIENCE</p>
                 </div>
                 <hr></hr>
                 <div className='milestone'>
-                  <h1>5+</h1>
+                  <h1>2+</h1>
                   <p>PROJECTS COMPLETED</p>
                 </div>
                 <hr></hr>
                 <div className='milestone'>
-                  <h1>3+</h1>
-                  <p>HAPPY CLIENTS</p>
+                  <h1>1+</h1>
+                  <p>HIRED</p>
                 </div>
             </div>
 

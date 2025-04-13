@@ -7,7 +7,7 @@ const Introduction = () => {
       <div className='intro-container'>
       <div className='introduction-brief'>
           <h1>Who am I</h1>       
-          <p>My name is Pyae Phyo Maung, a computer science graduate with over four years of AI and Data anaylst.</p>
+          <p>My name is Pyae Phyo Maung, a computer science graduate with over four-year experiences of programming and management.</p>
           <p>
           A reliable fellow when it comes to any project development. Possesses a creative instinct to develop new things with clean and modular knowledge. 
           Ready for new challenges to hone my technical skills and bring along positive impacts. 

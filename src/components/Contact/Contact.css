@@ -382,12 +382,12 @@ input:-webkit-autofill {
     }
     
     .contact-right input{
-        width: 320px;
+        width: 300px;
         font-size: var(--fs-small-sm);
     }
     
     .contact-right textarea{
-        width: 320px;
+        width: 300px;
         font-size: var(--fs-small-sm);
     }
     

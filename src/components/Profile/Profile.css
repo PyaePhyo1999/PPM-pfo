@@ -58,12 +58,14 @@
   
 
 .profile-brief .intro{
+    line-height: var(--lh-xxl);
     padding: var(--padding-md) 0;
     font-size: var(--fs-medium-lg);
     font-weight: var(--fw-medium);
     color: var(--color-text);
     text-align: center;
 }
+
 
 .profile-brief .intro span{
     font-weight: var(--fw-medium);
@@ -184,7 +186,7 @@
 
     .profile{
         margin: var(--margin-md) var(--margin-lg);
-        padding: var(--padding-xxs) var(--padding-md); 
+        padding: var(--padding-sm) var(--padding-md); 
     }
     .decorated-text-box .hello{
         font-size: var(--fs-medium-sm);
@@ -216,7 +218,7 @@
 
     .profile{
         margin: var(--margin-md) var(--margin-lg);
-        padding: var(--padding-xxs) var(--padding-md); 
+        padding: var(--padding-sm) var(--padding-md); 
     }
     .decorated-text-box .hello{
         font-size: var(--fs-medium-sm);
@@ -248,7 +250,7 @@
 
     .profile{
         margin: var(--margin-md) var(--margin-lg);
-        padding: var(--padding-xxs) var(--padding-md); 
+        padding: var(--padding-sm) var(--padding-md); 
     }
 
     .decorated-text-box .hello{
@@ -282,7 +284,7 @@
 
     .profile{
         margin: var(--margin-md) var(--margin-md);
-        padding: var(--padding-xxs) var(--padding-md); 
+        padding: var(--padding-sm) var(--padding-md); 
     }
 
     .decorated-text-box .hello{
@@ -331,8 +333,8 @@
 @media(max-width:480px){
 
     .profile{
-        margin: 0 var(--margin-md);
-        padding: var(--padding-xxs) 0; 
+        margin: var(--margin-xs) var(--margin-md);
+        padding: var(--padding-sm) 0; 
     }
 
     .decorated-text-box .hello{

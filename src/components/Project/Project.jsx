@@ -3,7 +3,12 @@ import './Project.css'
 import project from '../../utils/mywork_data'
 import arrow from '../../assets/right-arrow.png'
 
+
 const Project = () => {
+  
+
+
+
   return (
     <div id='project' className='project'>
     <div className='project-container'>
@@ -27,7 +32,8 @@ const Project = () => {
                           )}
                          <div className='brief'>
                              <h4>{project.w_name}</h4>
-                             <div className='see-more'><img id="icon" src={arrow} alt=''></img></div>
+                             <div className='see-more' onClick={() => window.open(project.w_url, "_blank")}>
+                              <img id="icon" src={arrow} alt=''></img></div>
                         </div>
                     </div>
 

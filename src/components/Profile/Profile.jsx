@@ -21,8 +21,8 @@ const Profile = () => {
                 <p className='hello'>Hello There!</p>
           </div>
           <div className='intro'><p>I'm <span> Pyae Phyo,</span></p>
-               <p><span>AI and Data Analyst </span> Base in Thailand.</p>
-              
+               <p><span>Data Entry and Analyst </span> </p>
+               <p>Base in Myanmar</p>
             </div> 
             <div className='profile-action'>
                 <div className='resume' onClick={viewResume}><AnchorLink id='my-resume'>My Resume</AnchorLink><span>&#x27A4;</span></div>
